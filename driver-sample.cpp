@@ -296,14 +296,14 @@ void Test1(HashData *phd)
   try
   {
     char buf[10];
-    //cout << "Inserting " << size << " items...\n";
     unsigned size = 30/*(unsigned)(initial_size * max_load_factor + 100)*/;
+    //cout << "Inserting " << size << " items...\n";
     for (unsigned i = 101; i <= size + 101; i++)
     {
       sprintf(buf, "%3i001", i);
       ht.insert(buf, 0);
-      //DumpTable<T>(*ht);
-      //DumpStats<T>(*ht);
+      //DumpTable<T>(ht);
+      //DumpStats<T>(ht);
       //cout << "==============================================================" << std::endl;
     }
     DumpTable<T>(ht);
