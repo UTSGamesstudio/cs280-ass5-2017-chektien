@@ -128,8 +128,9 @@ class ChHashTable
 
         ChHTNode* make_node(const char* Key, const T& Data);
         void delete_node(ChHTNode* node);
-        ChHTNode* find_node(const char* key) const; 
-        void insert_node(ChHTNode* node);
+        //ChHTNode* find_node(const T& Data) const; 
+        ChHTNode* find_node(const unsigned& i, const char* Key, ChHTNode*& prev_node) const; 
+        void insert_node(const unsigned& i, ChHTNode* node);
 };
 
 #include "ChHashTable.cpp"
